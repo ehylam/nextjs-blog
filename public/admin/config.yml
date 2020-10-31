@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  repo: ehylam/gatsby-blog-v2
+
+media_folder: public/assets
+public_folder: public/public_assets
+
+collections:
+  - name: 'Blog Post'
+    label: 'Blog'
+    folder: 'public/posts'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{year}}/{{title}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

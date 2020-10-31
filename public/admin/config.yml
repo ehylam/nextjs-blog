@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: ehylam/gatsby-blog-v2
+  repo: ehylam/nextjs.blog
 
 media_folder: public/assets
 public_folder: public/public_assets

@@ -1,6 +1,6 @@
 ---
 title: Whats up
-author: 'Cassidy'
+author: Eric
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam vestibulum morbi blandit cursus risus. Magna eget est lorem ipsum. A diam maecenas sed enim ut sem. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Pretium aenean pharetra magna ac placerat vestibulum lectus. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Ac turpis egestas maecenas pharetra convallis posuere morbi leo urna. Nunc consequat interdum varius sit amet mattis vulputate enim. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Fermentum leo vel orci porta non pulvinar neque laoreet.
 

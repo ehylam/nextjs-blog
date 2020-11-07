@@ -4,6 +4,8 @@ import ReactMarkdown from 'react-markdown'
 
 import Layout from '../../components/Layout'
 
+    // [postname].js - NextJS will know that this file is dynamic
+
 export default function BlogPost({ siteTitle, frontmatter, markdownBody}) {
     if(!frontmatter) return <></>
 

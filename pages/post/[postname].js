@@ -4,8 +4,7 @@ import ReactMarkdown from 'react-markdown'
 
 import Layout from '../../components/Layout'
 
-    // [postname].js - NextJS will know that this file is dynamic
-
+// [postname].js - NextJS will know that this file is dynamic
 export default function BlogPost({ siteTitle, frontmatter, markdownBody}) {
     if(!frontmatter) return <></>
 
@@ -26,8 +25,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody}) {
 }
 
 export async function getStaticProps({...ctx}) {
-    const { postname } = ctx.params
-
+    const { postname } = ctx.params;
     const content = await import(`../../public/posts/${postname}.md`)
     const config = await import('../../siteconfig.json')
     const data = matter(content.default)
@@ -40,11 +38,15 @@ export async function getStaticProps({...ctx}) {
         }
     }
 }
-
+// If a page has dynamic routes ([postname])
+// Get the dynamic routes to be built
 export async function getStaticPaths() {
     const blogSlugs = ((context) => {
+        // return the keys for each blog post extracted from '../../public/posts
         const keys = context.keys();
+        //
         const data = keys.map((key, index) => {
+            // Sluggify
             let slug = key.replace(/^.*[\\\/]/, '').slice(0, -3)
 
             return slug
@@ -52,8 +54,9 @@ export async function getStaticPaths() {
 
         return data
     })(require.context('../../public/posts', true, /\.md$/))
-
+    // then return the current slug
     const paths = blogSlugs.map((slug) => `/post/${slug}`)
+
     return {
         paths,
         fallback: false

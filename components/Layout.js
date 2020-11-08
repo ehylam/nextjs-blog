@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Header from './Header'
+import Nav from './Nav'
 
 export default function Layout({ children, pageTitle, ...props}) {
     return (
@@ -9,7 +9,7 @@ export default function Layout({ children, pageTitle, ...props}) {
                 <title>{pageTitle}</title>
             </Head>
             <section className="layout">
-                <Header/>
+                <Nav title={pageTitle}/>
                 <div className="content">{children}</div>
             </section>
             <footer>

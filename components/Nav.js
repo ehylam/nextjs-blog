@@ -6,7 +6,11 @@ export default function Nav({title}) {
             <header className="header">
                 <div className="theme"></div>
                 <h3>{title}</h3>
-                <div className="burger"></div>
+                <div className="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </header>
 
             <nav className="nav">

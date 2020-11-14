@@ -10,7 +10,7 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody}) {
 
     return (
         <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
-            <Link href="/">
+            <Link href="/posts">
                 <a>Return to posts</a>
             </Link>
             <article>
@@ -55,7 +55,7 @@ export async function getStaticPaths() {
         return data
     })(require.context('../../public/posts', true, /\.md$/))
     // then return the current slug
-    const paths = blogSlugs.map((slug) => `/post/${slug}`)
+    const paths = blogSlugs.map((slug) => `/posts/${slug}`)
 
     return {
         paths,

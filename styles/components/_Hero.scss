@@ -1,0 +1,13 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    h1 {
+        font-size: 8vw;
+        .whitespace {
+            display: inline-block;
+            width: 2vw;
+        }
+    }
+}

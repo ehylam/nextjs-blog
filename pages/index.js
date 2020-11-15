@@ -1,12 +1,10 @@
 import Layout from '../components/Layout'
+import Hero from '../components/Hero'
 
 const Index = ({ title, description, ...props}) => {
 	return (
 		<Layout pageTitle={title}>
-			<p className="description">
-				{description}
-			</p>
-
+      <Hero title="Lorem Ipsum"/>
 		</Layout>
 	)
 }

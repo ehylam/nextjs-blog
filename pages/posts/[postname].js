@@ -9,13 +9,13 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody}) {
     if(!frontmatter) return <></>
 
     return (
-        <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
+        <Layout pageTitle={`${siteTitle}`}>
             <Link href="/posts">
                 <a>Return to posts</a>
             </Link>
             <article>
-                <h1>{frontmatter.title}</h1>
-                <p>By {frontmatter.author}</p>
+                <h1>{frontmatter?.title}</h1>
+                <p>By {frontmatter?.author}</p>
                 <div>
                     <ReactMarkdown source={markdownBody}/>
                 </div>

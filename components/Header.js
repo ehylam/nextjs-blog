@@ -4,15 +4,17 @@ export default function Nav({title}) {
     return (
         <>
             <header className="header">
-                <div className="theme"></div>
                 <h3>{title}</h3>
-                <div className="burger">
+                <div className="theme"></div>
+
+            </header>
+            <div className="burger">
+                <div className="burger_block">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-            </header>
-
+            </div>
             <nav className="nav">
                 <Link href="/">
                     <a>Home</a>

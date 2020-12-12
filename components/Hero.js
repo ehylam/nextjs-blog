@@ -1,6 +1,3 @@
-
-
-
 const Hero = ({title}) => {
     var textArr = title.split("");
     splitText(textArr);
@@ -16,15 +13,22 @@ const Hero = ({title}) => {
     }
 
 
+
+
     return (
         <section className="hero">
-            <h1>{textArr.map((letter, key) => {
-                if(letter == null) {
-                    return <div className="whitespace" key={key}></div>;
-                } else {
-                    return <span key={key}>{letter}</span>;
-                }
-            })}</h1>
+            <div className="hero__block">
+                Something fancy here?!
+            </div>
+            <div className="hero__block">
+                <h2>{textArr.map((letter, key) => {
+                    if(letter == null) {
+                        return <div className="whitespace" key={key}></div>;
+                    } else {
+                        return <span key={key}>{letter}</span>;
+                    }
+                })}</h2>
+            </div>
 
         </section>
      );

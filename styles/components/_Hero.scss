@@ -1,13 +1,17 @@
 .hero {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
-    h1 {
-        font-size: 8vw;
+
+    @media (min-width: 768px) {
+        padding: 0 90px;
+    }
+    h2 {
+        // text-transform: uppercase;
         .whitespace {
             display: inline-block;
-            width: 2vw;
+            width: 1vw;
         }
     }
 }

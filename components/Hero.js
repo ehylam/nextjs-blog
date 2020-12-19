@@ -18,16 +18,15 @@ const Hero = ({title}) => {
     return (
         <section className="hero">
             <div className="hero__block">
-                Something fancy here?!
             </div>
             <div className="hero__block">
-                <h2>{textArr.map((letter, key) => {
+                <h1>{textArr.map((letter, key) => {
                     if(letter == null) {
                         return <div className="whitespace" key={key}></div>;
                     } else {
                         return <span key={key}>{letter}</span>;
                     }
-                })}</h2>
+                })}</h1>
             </div>
 
         </section>

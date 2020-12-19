@@ -6,11 +6,20 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
-// h1 {
-
-// }
+h1 {
+  line-height: 0.6;
+  font-size: 5vw;
+  @media (min-width: 768px) {
+    font-size: 90px;
+  }
+}
 
 h2 {
-  font-size: 5vw;
-  line-height: 0.6;
+  line-height: 1;
+  font-size: 40px;
+  margin-top: 0;
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 60px;
+  }
 }

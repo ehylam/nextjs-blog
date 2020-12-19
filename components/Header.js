@@ -1,33 +1,28 @@
-import Link from 'next/link'
+import { useState } from 'react'
+import Nav from './Nav'
 
-export default function Nav({title}) {
+export default function Header({title}) {
+
+    const [eatenBurger, setBurger] = useState(false);
+
+    function eatBurger() {
+        eatenBurger ? setBurger(false) : setBurger(true);
+    }
     return (
         <>
             <header className="header">
-                <h3>{title}</h3>
+                <a href="https://www.ericlam.dev/">{title}</a>
                 <div className="theme"></div>
 
             </header>
             <div className="burger">
-                <div className="burger_block">
+                <div className={"burger__block" + (eatenBurger ? ' active' : '')} onClick={eatBurger}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <nav className="nav">
-                <Link href="/">
-                    <a>Home</a>
-                </Link>
-
-                <Link href="/projects">
-                    <a>Projects</a>
-                </Link>
-
-                <Link href="/blog">
-                    <a>Blog</a>
-                </Link>
-            </nav>
+            <Nav burgerEaten={eatenBurger}/>
         </>
     )
 }

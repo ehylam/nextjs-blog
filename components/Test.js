@@ -16,7 +16,7 @@ const Test = ({title}) => {
         content = <p>Good bye world, this is false</p>
     }
     return (
-    <>
+    <div className="test__block section">
         <h4>{title}</h4>
         <a href="" onClick={toggleButton}>Test</a>
         {content}
@@ -25,7 +25,7 @@ const Test = ({title}) => {
         {isToggled ? (<p>Inside return - True</p>) : (<p>Inside return - False</p>)}
 
         {isToggled && <span>Hidden message</span>}
-    </>
+    </div>
      );
 }
 

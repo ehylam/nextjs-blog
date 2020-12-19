@@ -1,0 +1,78 @@
+.header {
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 50px;
+    background-color: $light;
+    width: 100%;
+    h3 {
+        margin: 0;
+    }
+
+    .theme {
+        cursor: pointer;
+        left: 60px;
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        border-radius: 100%;
+        @media (min-width: 768px) {
+            left: 50px;
+        }
+    }
+
+
+}
+
+
+.burger {
+    position: fixed;
+    bottom: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    @media (min-width: 768px) {
+        right: 50px;
+    }
+
+    &__block {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+
+        span {
+            position: absolute;
+            &:first-child {
+                top: 0;
+
+            }
+            &:nth-child(2) {
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+
+            &:last-child {
+                bottom: 0;
+            }
+        }
+        &.active {
+            span {
+                &:nth-child(2) {
+                    left: -50%;
+                }
+            }
+        }
+
+        span {
+            display: inherit;
+            height: 1px;
+            width: 100%;
+            background-color: $dark;
+            transition: all 0.35s ease;
+        }
+    }
+}
